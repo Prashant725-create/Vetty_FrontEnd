@@ -1,73 +1,129 @@
-# Welcome to your Lovable project
+# Mini Jira Board – Angular Assignment
 
-## Project info
+This project is a mini Jira-board-like application built using Angular as part of the frontend assignment for the Vetty internship. 
 
-**URL**: https://lovable.dev/projects/40d6f58f-088c-4a02-acd1-25049c7a1a40
+nws_2879_1764941075_copy
 
-## How can I edit this code?
+The app allows a user to log in and manage tasks across multiple columns, similar to a kanban/Jira board.
 
-There are several ways of editing your application.
+# Features
+# 1. Login Page
 
-**Use Lovable**
+Dummy credentials:
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/40d6f58f-088c-4a02-acd1-25049c7a1a40) and start prompting.
+Email: admin@test.com
 
-Changes made via Lovable will be committed automatically to this repo.
+Password: admin123
 
-**Use your preferred IDE**
+On successful login, the user is redirected to the Jira Board.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+# 2. Jira Board
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+Columns:
 
-Follow these steps:
+To Do
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+In Progress
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+Need Review
 
-# Step 3: Install the necessary dependencies.
-npm i
+Completed
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+Layout inspired by the reference Jira-style board shared in the assignment.
+
+# 3. Task Management
+
+Click on the “+” button in any column to add a task.
+
+Task fields:
+
+Task Title
+
+Task ID
+
+Description
+
+Target Column
+
+Tasks are displayed under the selected column.
+
+# 4. Drag & Drop
+
+Tasks can be dragged and dropped between columns.
+
+Implemented using Angular CDK Drag & Drop.
+
+# 5. (Optional) Persistence
+
+Board data is stored in localStorage (if enabled) so that:
+
+Tasks persist across page refreshes.
+
+Column states are retained.
+
+# Tech Stack
+
+Framework: Angular (10+)
+
+UI / Styling: Angular, CSS
+
+Drag & Drop: Angular CDK
+
+Storage: Browser localStorage (client-side only)
+
+Build Tooling: Standard Angular tooling (with npm scripts)
+
+Note: Only client-side implementation is included; no backend is used, as per the assignment.
+
+# Getting Started (Run Locally)
+1. Prerequisites
+
+Node.js (LTS recommended)
+
+npm (comes with Node)
+
+Verify:
+
+node -v
+npm -v
+
+2. Install Dependencies
+
+From the project root folder:
+
+npm install
+
+3. Start the Dev Server
 npm run dev
-```
 
-**Edit a file directly in GitHub**
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+(Then Go the port shown in your terminal)
 
-**Use GitHub Codespaces**
+# Login Details
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+Use the following credentials to log in:
 
-## What technologies are used for this project?
+Email: admin@test.com
 
-This project is built with:
+Password: admin123
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+After login, you’ll be redirected to the Jira board.
 
-## How can I deploy this project?
+# Project Structure (High-level)
+src/
+  app/
+    auth/          # Login components & auth logic
+    board/         # Jira board components (columns, tasks)
+    shared/        # Interfaces, models, shared services
+    core/          # Core services (storage, auth, etc.)
+  assets/          # Static assets (if any)
+  styles.css       # Global styles
 
-Simply open [Lovable](https://lovable.dev/projects/40d6f58f-088c-4a02-acd1-25049c7a1a40) and click on Share -> Publish.
+# Assumptions
 
-## Can I connect a custom domain to my Lovable project?
+Only a single user flow is required (no user registration).
 
-Yes, you can!
+No backend or API is used; all data is stored and managed on the client.
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+Basic validations are applied to the add-task form where necessary.
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
