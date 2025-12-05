@@ -97,12 +97,7 @@ npm install
 npm run dev
 
 
-Then open your browser and go to:
-
-http://localhost:4200/
-
-
-(or the port shown in your terminal)
+(Then Go the port shown in your terminal)
 
 # Login Details
 
